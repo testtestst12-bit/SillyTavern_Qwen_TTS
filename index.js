@@ -3,8 +3,8 @@
 // 지원 모델: Qwen3-TTS (프리셋 + 클로닝) / Chatterbox (클로닝)
 // ================================================================
 
-import { extension_settings, saveSettingsDebounced } from "../../../extensions.js";
-import { eventSource, event_types } from "../../../../script.js";
+import { extension_settings, saveSettingsDebounced } from "/scripts/extensions.js";
+import { eventSource, event_types } from "/script.js";
 ```
 const EXT_NAME = "local-tts";
 const SERVER_URL = "http://localhost:7851";
