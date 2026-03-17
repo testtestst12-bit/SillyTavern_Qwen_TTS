@@ -1,8 +1,8 @@
 {
     "display_name": "Local TTS (Qwen + Chatterbox)",
     "version": "1.0.0",
-    "author": "your-name",
-    "homePage": "https://github.com/your-name/local-tts-st",
+    "author": "testtestst12-bit",
+    "homePage": "https://github.com/testtestst12-bit/SillyTavern_Qwen_TTS",
     "js": "index.js",
     "css": "style.css",
     "description": "Qwen3-TTS와 Chatterbox TTS를 로컬에서 실행하는 SillyTavern 확장"
