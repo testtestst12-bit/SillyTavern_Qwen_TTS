@@ -1,0 +1,186 @@
+/* ================================================================
+   Local TTS Extension — SillyTavern UI Styles
+   ================================================================ */
+
+/* ── 패널 전체 ─────────────────────────────────────────────────── */
+.local-tts-panel {
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--black-50, rgba(0,0,0,0.1));
+    margin-bottom: 12px;
+}
+
+.local-tts-panel h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 14px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.local-tts-icon { font-size: 16px; }
+
+/* ── 배지 (ON / OFF) ───────────────────────────────────────────── */
+.local-tts-badge {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-left: auto;
+}
+.badge-on  { background: #2ecc71; color: #fff; }
+.badge-off { background: #636363; color: #ccc; }
+
+/* ── 행 레이아웃 ───────────────────────────────────────────────── */
+.local-tts-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.local-tts-row > label {
+    font-size: 12px;
+    color: var(--SmartThemeBodyColor, #ccc);
+    opacity: 0.8;
+}
+
+/* ── 토글 라벨 (가로 배치) ─────────────────────────────────────── */
+.local-tts-toggle-label {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* ── 입력 요소 ─────────────────────────────────────────────────── */
+.local-tts-select,
+.local-tts-input {
+    background: var(--black-50, rgba(0,0,0,0.2));
+    border: 1px solid var(--SmartThemeBorderColor, rgba(255,255,255,0.1));
+    border-radius: 4px;
+    color: var(--SmartThemeBodyColor, #eee);
+    padding: 6px 8px;
+    font-size: 13px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.local-tts-range {
+    width: 100%;
+    accent-color: var(--SmartThemeQuoteColor, #7289da);
+}
+
+/* ── 속도 라벨 (눈금) ──────────────────────────────────────────── */
+.local-tts-speed-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    opacity: 0.45;
+    margin-top: 2px;
+}
+
+/* ── 섹션 구분 ─────────────────────────────────────────────────── */
+.local-tts-section {
+    border-left: 2px solid var(--SmartThemeQuoteColor, #7289da);
+    padding-left: 10px;
+    margin-bottom: 12px;
+}
+
+.local-tts-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    opacity: 0.55;
+    margin-bottom: 8px;
+}
+
+/* ── URL 입력 + 버튼 행 ────────────────────────────────────────── */
+.local-tts-url-row {
+    display: flex;
+    gap: 6px;
+}
+
+.local-tts-url-row .local-tts-input { flex: 1; }
+
+/* ── 힌트 텍스트 ───────────────────────────────────────────────── */
+.local-tts-hint {
+    font-size: 11px;
+    opacity: 0.45;
+    margin-top: 2px;
+}
+
+/* ── 클로닝 상태 표시 ──────────────────────────────────────────── */
+.local-tts-clone-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #2ecc71;
+}
+
+/* ── 버튼 영역 ─────────────────────────────────────────────────── */
+.local-tts-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.local-tts-btn {
+    flex: 1;
+    padding: 7px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+.local-tts-btn:hover    { opacity: 0.85; }
+.local-tts-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-primary {
+    background: var(--SmartThemeQuoteColor, #7289da);
+    color: #fff;
+}
+
+.btn-secondary {
+    background: var(--black-50, rgba(255,255,255,0.1));
+    color: var(--SmartThemeBodyColor, #eee);
+    border: 1px solid var(--SmartThemeBorderColor, rgba(255,255,255,0.1));
+}
+
+/* 작은 버튼 변형 */
+.btn-sm {
+    flex: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.btn-xs {
+    flex: none;
+    padding: 3px 8px;
+    font-size: 11px;
+}
+
+/* ── 상태 메시지 ───────────────────────────────────────────────── */
+.local-tts-message {
+    margin-top: 8px;
+    font-size: 12px;
+    min-height: 18px;
+    transition: all 0.2s;
+}
+
+.msg-info    { color: #aaa; }
+.msg-success { color: #2ecc71; }
+.msg-error   { color: #e74c3c; }
