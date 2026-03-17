@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  tts-server:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: st-local-tts
+    ports:
+      - "7851:7851"       # SillyTavern 확장이 이 포트로 연결
+    volumes:
+      # 모델 캐시 유지 → 재시작해도 다시 다운로드 안 함
+      - tts-model-cache:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - CUDA_VISIBLE_DEVICES=0
+
+volumes:
+  tts-model-cache:
