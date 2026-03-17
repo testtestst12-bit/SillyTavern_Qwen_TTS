@@ -1,0 +1,24 @@
+# FastAPI 서버
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+pydantic==2.7.0
+
+# PyTorch (Dockerfile에서 CUDA 버전으로 따로 설치)
+# torch==2.3.0
+# torchaudio==2.3.0
+
+# 오디오 처리
+soundfile==0.12.1
+
+# HuggingFace
+transformers==4.42.0
+accelerate==0.31.0
+
+# Qwen3-TTS
+git+https://github.com/QwenLM/Qwen3-TTS.git
+
+# Chatterbox TTS
+git+https://github.com/resemble-ai/chatterbox.git
+
+# 유튜브 다운로드
+yt-dlp==2024.5.27
